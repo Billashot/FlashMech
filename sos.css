@@ -1,0 +1,314 @@
+/* FLASHMECH EMERGENCY SOS PAGE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080a0d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #0d1015;
+    border-bottom: 1px solid #252525;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff2020;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    color: #ff2020;
+}
+
+/* MAIN CONTAINER */
+
+.sos-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* HEADING */
+
+.sos-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sos-tag {
+    color: #ff2020;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sos-heading h1 {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.sos-heading h1 span {
+    color: #ff2020;
+}
+
+.sos-heading p {
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+/* PROGRESS INDICATOR */
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.progress-step {
+    flex: 1;
+    text-align: center;
+    padding: 20px 10px;
+    background: #11151b;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    color: #777777;
+}
+
+.progress-step span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: #252525;
+    font-weight: bold;
+}
+
+.progress-step p {
+    font-size: 13px;
+}
+
+.progress-step.active {
+    border-color: #ff2020;
+    color: white;
+    background: #1b1013;
+}
+
+.progress-step.active span {
+    background: #ff2020;
+    color: white;
+}
+
+/* FORM DESIGN */
+
+#sosForm {
+    background: #11151b;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #292929;
+    box-shadow: 0 0 40px rgba(255, 32, 32, 0.05);
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-step h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.form-step > p {
+    color: #aaaaaa;
+    margin-bottom: 30px;
+}
+
+/* INPUT FIELDS */
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 25px;
+    background: #080a0d;
+    color: white;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #ff2020;
+}
+
+/* BUTTONS */
+
+.next-btn,
+.submit-btn {
+    background: #ff2020;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-btn:hover,
+.submit-btn:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+}
+
+.back-step {
+    background: #252525;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.location-btn {
+    width: 100%;
+    background: transparent;
+    color: #ff2020;
+    padding: 15px;
+    border: 1px solid #ff2020;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.location-btn:hover {
+    background: rgba(255, 32, 32, 0.1);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* REQUEST SUMMARY */
+
+.summary-box {
+    background: #080a0d;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    margin-bottom: 30px;
+    line-height: 2;
+}
+
+/* SUCCESS MESSAGE */
+
+#successMessage {
+    background: #102018;
+    border: 1px solid #24a148;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+#successMessage[hidden] {
+    display: none;
+}
+
+/* DEMO NOTICE */
+
+.demo-note {
+    margin-top: 25px;
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .sos-container {
+        margin: 30px auto;
+    }
+
+    .sos-heading h1 {
+        font-size: 35px;
+    }
+
+    #sosForm {
+        padding: 25px 20px;
+    }
+
+    .progress-step {
+        padding: 15px 5px;
+    }
+
+    .progress-step p {
+        font-size: 11px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+}

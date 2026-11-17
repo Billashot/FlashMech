@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency SOS | FlashMech</title>
+
+    <link rel="stylesheet" href="sos.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ⚡ FLASH<span>MECH</span>
+        </a>
+
+        <a href="index.html" class="back-btn">
+            ← BACK TO HOME
+        </a>
+
+    </header>
+
+
+    <!-- EMERGENCY SOS SECTION -->
+
+    <main class="sos-container">
+
+        <div class="sos-heading">
+
+            <p class="sos-tag">🚨 FLASHMECH EMERGENCY RESPONSE</p>
+
+            <h1>REQUEST <span>RESCUE.</span></h1>
+
+            <p>
+                Tell us what happened.
+                We'll guide you through your rescue request.
+            </p>
+
+        </div>
+
+
+        <!-- PROGRESS INDICATOR -->
+
+        <div class="progress-container">
+
+            <div class="progress-step active" id="progress1">
+                <span>1</span>
+                <p>Vehicle Details</p>
+            </div>
+
+            <div class="progress-step" id="progress2">
+                <span>2</span>
+                <p>Location</p>
+            </div>
+
+            <div class="progress-step" id="progress3">
+                <span>3</span>
+                <p>Confirmation</p>
+            </div>
+
+        </div>
+
+
+        <!-- SOS FORM -->
+
+        <form id="sosForm">
+
+            <!-- STEP 1: VEHICLE DETAILS -->
+
+            <div class="form-step active" id="step1">
+
+                <h2>🚗 Vehicle Information</h2>
+
+                <p>Select your vehicle and the problem you're facing.</p>
+
+                <label for="vehicleType">Vehicle Type</label>
+
+                <select id="vehicleType" required>
+                    <option value="">Select Vehicle</option>
+                    <option value="Car">🚗 Car</option>
+                    <option value="Bike">🏍️ Bike</option>
+                    <option value="EV">⚡ Electric Vehicle</option>
+                </select>
+
+
+                <label for="problemType">What's the problem?</label>
+
+                <select id="problemType" required>
+                    <option value="">Select Problem</option>
+                    <option value="Flat Tyre">Flat Tyre</option>
+                    <option value="Dead Battery">Dead Battery</option>
+                    <option value="Out of Fuel">Out of Fuel</option>
+                    <option value="Breakdown">Vehicle Breakdown</option>
+                    <option value="EV Charging">EV Charging Required</option>
+                </select>
+
+
+                <button type="button" class="next-btn" id="next1">
+                    CONTINUE →
+                </button>
+
+            </div>
+
+
+            <!-- STEP 2: LOCATION AND CONTACT -->
+
+            <div class="form-step" id="step2">
+
+                <h2>📍 Your Location</h2>
+
+                <p>Where should assistance reach you?</p>
+
+                <label for="userName">Your Name</label>
+                <input
+                    type="text"
+                    id="userName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="userPhone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="userPhone"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+                <label for="userLocation">Your Location</label>
+
+                <input
+                    type="text"
+                    id="userLocation"
+                    placeholder="Enter your location"
+                    required
+                >
+
+                <button type="button" class="location-btn" id="detectLocation">
+                    📍 DETECT MY LOCATION
+                </button>
+
+                <p id="locationStatus" aria-live="polite"></p>
+
+                <div class="form-buttons">
+
+                    <button type="button" class="back-step" id="back2">
+                        ← BACK
+                    </button>
+
+                    <button type="button" class="next-btn" id="next2">
+                        CONTINUE →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 3: CONFIRMATION -->
+
+            <div class="form-step" id="step3">
+
+                <h2>✅ Confirm Your Request</h2>
+
+                <p>Review your details before submitting.</p>
+
+                <div class="summary-box" id="requestSummary">
+                </div>
+
+                <div class="form-buttons">
+
+                    <button type="button" class="back-step" id="back3">
+                        ← BACK
+                    </button>
+
+                    <button type="submit" class="submit-btn">
+                        🚨 SUBMIT REQUEST
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <div id="successMessage" role="status" aria-live="polite" hidden></div>
+
+        <p class="demo-note">
+            ⚠️ College project demo only.
+            This form does not contact emergency services or dispatch mechanics.
+        </p>
+
+    </main>
+
+    <script src="sos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FlashMech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>FLASH<span>MECH</span></h2>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ai.html">Flash AI</a>
+            <a href="sos.html">SOS</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<main class="contact-page">
+    <section class="contact-heading">
+        <h1>CONTACT <span>US</span></h1>
+        <p>Have a question? Get in touch with the FlashMech team.</p>
+    </section>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>LET'S CONNECT</h2>
+            <p>We're here to help make your journey smoother.</p>
+            <p>🚗 Roadside Assistance</p>
+            <p>⚡ EV Support</p>
+            <p>🤖 FLASH AI Demo</p>
+            <p class="demo-note">FlashMech is a student project demonstration. This contact form does not send messages to a live support team.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="subject" placeholder="Subject" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">SEND MESSAGE</button>
+            <p id="formResponse" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 FlashMech | Your Roadside Assistance Partner</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("formResponse").textContent =
+        "Thank you! Your demo message has been received on this page.";
+    this.reset();
+});
+</script>
+
+</body>
+</html>

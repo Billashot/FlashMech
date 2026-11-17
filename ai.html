@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FLASH AI | Smart Mechanic Assistant</title>
+
+    <link rel="stylesheet" href="ai.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ⚡ FLASH<span>MECH</span>
+        </a>
+
+        <div class="nav-right">
+            <a href="index.html" class="home-btn">
+                ← BACK TO HOME
+            </a>
+
+            <a href="sos.html" class="rescue-btn">
+                🚨 REQUEST RESCUE
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- AI ASSISTANT SECTION -->
+    <main class="ai-container">
+
+        <div class="ai-heading">
+
+            <p class="ai-tag">⚡ YOUR SMART ROADSIDE COMPANION</p>
+
+            <h1>MEET <span>FLASH AI.</span></h1>
+
+            <p>
+                Your intelligent vehicle assistance companion.
+                Ask questions, understand common problems,
+                and get helpful guidance.
+            </p>
+
+        </div>
+
+
+        <!-- CHAT INTERFACE -->
+        <section class="chat-container">
+
+            <!-- CHAT HEADER -->
+            <div class="chat-header">
+
+                <div class="ai-avatar">🤖</div>
+
+                <div class="ai-info">
+                    <h3>FLASH AI</h3>
+                    <p>Vehicle Assistance Chatbot</p>
+                </div>
+
+                <span class="online-status">
+                    ● DEMO MODE
+                </span>
+
+            </div>
+
+
+            <!-- CHAT MESSAGES -->
+            <div class="chat-messages"
+                 id="chatMessages"
+                 role="log"
+                 aria-live="polite">
+
+                <div class="message ai-message">
+
+                    <div class="message-avatar">🤖</div>
+
+                    <div class="message-content">
+                        <p>
+                            Hey there! 👋 I'm FLASH AI,
+                            your virtual mechanic assistant.
+                        </p>
+
+                        <p>
+                            Tell me what's happening with your vehicle,
+                            and I'll help you explore possible causes.
+                        </p>
+
+                        <p>
+                            What seems to be the problem?
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK QUESTIONS -->
+            <div class="quick-questions">
+
+                <button type="button" class="quick-btn"
+                        data-question="My car won't start">
+                    🚗 Car Won't Start
+                </button>
+
+                <button type="button" class="quick-btn"
+                        data-question="My car battery is dead">
+                    🔋 Battery Problem
+                </button>
+
+                <button type="button" class="quick-btn"
+                        data-question="My tyre is flat">
+                    🛞 Flat Tyre
+                </button>
+
+                <button type="button" class="quick-btn"
+                        data-question="My EV is not charging">
+                    ⚡ EV Charging
+                </button>
+
+            </div>
+
+
+            <!-- CHAT INPUT -->
+            <form class="chat-input-container" id="chatForm">
+
+                <input
+                    type="text"
+                    id="userMessage"
+                    placeholder="Ask FLASH AI about your vehicle..."
+                    aria-label="Your message"
+                    maxlength="500"
+                    required
+                >
+
+                <button type="submit" id="sendBtn">
+                    SEND ➤
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- DISCLAIMER -->
+        <p class="ai-disclaimer">
+            ⚠️ FLASH AI provides general vehicle information.
+            It cannot inspect your vehicle or replace a qualified mechanic.
+            This is a college project demonstration.
+        </p>
+
+    </main>
+
+    <script src="ai.js"></script>
+
+</body>
+</html>
